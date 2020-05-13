@@ -1,0 +1,153 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+
+
+
+
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+.nav ul li {
+	list-style:none;
+}
+.nav {
+	position:relative;
+	display:inline-block;
+	font-size:16px;
+	font-weight:900;
+}
+.nav-list {
+	text-align:left;
+}
+.nav-item {
+	float:left;
+ *display:inline;
+	zoom:1;
+	position:relative;
+	
+}
+.nav-item a {
+	display:block;
+	padding:0px 8px 0px 8px;
+	color:#fff;
+	font-size:15px;
+	text-decoration:none;
+	font-family:"Century Gothic";
+	font-weight:normal;
+}
+.nav-item > a:hover {
+	background:#c85a10;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.nav-item:hover .nav-submenu {
+	display:block;
+	text-decoration:none;
+}
+/* Navigation submenu */
+.nav-submenu {
+	display:none;
+	position:absolute;
+	left:0;
+	width:180px;
+	z-index:999;
+}
+.nav-submenu-item a {
+	background:#c85a10;
+	border-bottom:1px solid #d96d24;
+	display:block;
+	padding:0px;
+	padding-left:10px;
+	color:#FFFFFF;
+	font-size:13px;
+}
+.nav-submenu-item a:hover {
+	background:#b02a06;
+	text-decoration:none;
+	color:#FFFFFF;
+}
+/* Mobile navigation */
+.nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:0;
+	right:0;
+	background-image: url(../images/nav.jpg);
+	background-repeat:no-repeat;
+	height: 29px;
+	width: 31px;
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav-click {
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	border-left:1px solid #fff;
+	height:40px;
+	width:50px;
+	cursor:pointer;
+}
+.nav-click i {
+	display:block;
+	height:48px;
+	width:48px;
+	background:url(../images/drop.svg) no-repeat center center;
+	background-size:20px;
+}
+.nav-click:hover {
+	background-color:#c85a10;
+}
+.nav-rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 968px) {
+ .nav-mobile {
+ display:block;
+}
+ .nav {
+ width:100%;
+ padding:29px 0 0;
+}
+ .nav-list {
+ display:none;
+ background-color: #c85a10;
+}
+ .nav-item {
+ width:100%;
+ float:none;
+}
+ .nav-item > a {
+ padding:5px;
+ border-bottom:1px solid #fff;
+ color:#FFFFFF;
+}
+ .nav-click {
+ display:block;
+}
+ .nav-mobile-open {
+ border-radius:5px 5px 0 0;
+ -webkit-border-radius:5px 5px 0 0;
+ -moz-border-radius:5px 5px 0 0;
+}
+ .nav-item:hover .nav-submenu {
+ display:none;
+}
+ .nav-submenu {
+ position:static;
+ width:100%;
+}
+}
